@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd image
-docker build -t stubby-quad9 .
+docker build -t oikuda/stubby-quad9 .

@@ -7,7 +7,7 @@ Includes the following scripts:
 ```bash
 # --init -> enable interrupting the container with Ctrl+C
 # -p 127.0.0.1:53:53/udp -> forward container 53:udp to localhost
-docker run --init -p 127.0.0.1:53:53/udp stubby-quad9
+docker run --init -p 127.0.0.1:53:53/udp oikuda/stubby-quad9
 ```
 - stop.sh - kill container
 
