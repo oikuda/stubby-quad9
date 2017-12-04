@@ -1,0 +1,25 @@
+resolution_type: GETDNS_RESOLUTION_STUB
+dns_transport_list:
+  - GETDNS_TRANSPORT_TLS
+tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
+tls_query_padding_blocksize: 256
+
+edns_client_subnet_private : 1
+
+idle_timeout: 10000
+listen_addresses:
+  - 0.0.0.0
+round_robin_upstreams: 1
+
+upstream_recursive_servers:
+  - address_data: 9.9.9.9
+    tls_auth_name: "dns.quad9.net"
+    tls_pubkey_pinset:
+      - digest: "sha256"
+        value: MujBQ+U0p2eZLTnQ2KGEqs+fPLYV/1DnpZDjBDPwUqQ=
+        # This is an alternative, but it has proven to be really slow for me
+        #  - address_data: 146.185.167.43
+        #    tls_auth_name: "securedns.eu"
+        #    tls_pubkey_pinset:
+        #      - digest: "sha256"
+        #        value: 2EfbwDyk2zSnAbBJSpCSWZKKGUD+a6p/yg2bxdC+x2A= 
