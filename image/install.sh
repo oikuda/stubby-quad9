@@ -16,8 +16,8 @@ $min_apt_ins ca-certificates stubby
 cp /build/stubby.yml /etc/stubby
 
 ## Cleanup
-apt-get autoremove
-apt-get clean
-apt-get autoclean
+apt-get -y autoremove
+apt-get -y clean
+apt-get -y autoclean
 rm -rf /build /tmp/* /var/tmp/*
 rm -rf /var/lib/apt/lists/*
