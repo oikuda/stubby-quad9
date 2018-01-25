@@ -12,9 +12,6 @@ apt-get upgrade -y --no-install-recommends
 ## Install needed packages
 $min_apt_ins ca-certificates stubby
 
-## Copy stubby config file
-cp /build/stubby.yml /etc/stubby
-
 ## Cleanup
 apt-get -y autoremove
 apt-get -y clean
